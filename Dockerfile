@@ -47,4 +47,4 @@ RUN useradd -m -s /bin/bash -u 1000 user
 USER user
 VOLUME /home/user/.composer
 WORKDIR /app
-CMD ["./state/php-dev/run.sh"]
+CMD ["./run.sh"]
