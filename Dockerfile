@@ -14,7 +14,7 @@ RUN apt-get update          &&\
         wget                  \
         git                   \
         vim                   \
-        cairo                 \
+        libcairo2             \
         fontconfig            \
         make                &&\
     apt-get clean autoclean &&\
