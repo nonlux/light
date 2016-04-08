@@ -14,6 +14,8 @@ RUN apt-get update          &&\
         wget                  \
         git                   \
         vim                   \
+        cairo                 \
+        fontconfig            \
         make                &&\
     apt-get clean autoclean &&\
     apt-get autoremove -y   &&\
