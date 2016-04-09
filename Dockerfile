@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM wernight/phantomjs
 
 RUN apt-get update          &&\
     apt-get -y install        \
@@ -47,14 +47,6 @@ RUN ln -s /usr/lib/node_modules /usr/local/lib/
 
 RUN useradd -m -s /bin/bash -u 1000 user
 
-COPY preferences /etc/apt/
-RUN echo "\n deb http://httpredir.debian.org/debian sid  main contrib" >> /etc/apt/sources.list &&\
-    apt-get update           &&\
-    apt-get -y -t sid install         \
-           phantomjs         &&\
-    apt-get clean autoclean  &&\
-    apt-get autoremove -y    &&\
-    rm -rf /var/lib/{apt,dpkg,cache,log}
 
 USER user
 VOLUME /home/user/.composer
