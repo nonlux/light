@@ -14,7 +14,7 @@ RUN apt-get update          &&\
         wget                  \
         git                   \
         vim                   \
-        libcairo2             \
+        libcairo2-dev libjpeg62-turbo-dev libpango1.0-dev libgif-dev g++ \
         fontconfig            \
         make                &&\
     apt-get clean autoclean &&\
